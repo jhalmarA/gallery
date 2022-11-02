@@ -65,9 +65,21 @@ figcaption {
     width: 100%;
 }
 
-figure:hover{
-    filter:blur();
-    -webkit-filter:blur();
+img{
+    object-fit: cover;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+}
+
+img:hover{
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .figTitle{
