@@ -4,8 +4,8 @@
     box-sizing: border-box;
 }
 
-img{
-    width: 100%;
+body{
+    background-color: #ffffff;
 }
 
 .container{
@@ -13,7 +13,6 @@ img{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* text-align: center; */
     margin: 40px 20px 0 20px;
 }
 
@@ -24,9 +23,13 @@ img{
 }
 
 .container .heading h3{
-    font-size: 3em;
-    font-weight: bolder;
-    border-bottom: 3px solid #222;
+    font-size: 3rem;
+	text-transform: uppercase;
+	margin: 0;
+	text-align: center;
+	padding: 2rem 5% 1rem 5%;
+    color: #262626;
+    border-bottom: 3px solid #262626;
 }
 
 .container .heading h3 span{
@@ -37,11 +40,72 @@ img{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
 }
 
 .container .box .column{
     display: flex;
     flex-direction: column;
     width: 32.5%;
+}
+
+figure{
+    margin-bottom: 5px;
+    position: relative;
+}
+
+figcaption {
+    padding: 10px;
+    line-height: 1.8;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-align: right;
+    color: #fff;
+    opacity: 0.7;
+    width: 100%;
+}
+
+figure:hover{
+    filter:blur();
+    -webkit-filter:blur();
+}
+
+.figTitle{
+    font-weight: 800;
+}
+
+.figAuthor{
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+.container .box .column img{
+    width: 100%;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+@media only screen and (max-width:769px){
+    
+    
+    .container .box{
+        flex-direction: column;
+    }
+
+    .container .box .column{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:643px){
+    .container .heading{
+        width: 100%;
+    }
+    
+    .container .heading h3{
+        font-size: 2em;
+    }
 }
