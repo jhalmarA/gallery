@@ -4,9 +4,24 @@ iconClose = document.querySelector(".icon"),
 next = document.querySelector(".next"),
 prev = document.querySelector(".prev"),
 imgActive = document.querySelector(".image");
-let sourceImg;
+let sourceImg,
+figure = document.querySelectorAll(".wrapper"),
+btnSeeMore = document.querySelector(".btnSeeMore"),
+current = 0;
 
 window.onload = () => {
+    btnSeeMore.addEventListener("click", () => {
+        for(let i = current; i < current + 4; i++){
+            if(figure[i]){
+                figure[i].style.display="block";
+            }
+        }
+        current += 4;
+        if(current >= figure.length){
+            event.target.style.display="none";
+        }
+    });
+
     for(let i = 0; i < gallery.length; i++){
         gallery[i].addEventListener("click", () => {
             imgActive.src = event.target.src;
