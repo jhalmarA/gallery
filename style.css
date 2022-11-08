@@ -94,7 +94,6 @@ body{
     line-height: 42px;
     padding: 0;
     border: none;
-    z-index: 1;
     -webkit-transition: all 0.3s linear;
     transition: all 0.3s linear;
 }
