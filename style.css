@@ -69,7 +69,7 @@ body{
     height: 40px;
     padding: 10px 25px;
     border: 2px solid #1d1919;
-    font-weight: 800;
+    font-weight: 500;
     background: transparent;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -88,56 +88,42 @@ body{
     margin-bottom: 50px;
 }
 
-.btnH{
-    position: relative;
-    color: #1d1919;
-    z-index:0;
-    line-height: 40px;
+.btnH {
+    background: #262626;
+    color: #f1f1f1;
+    line-height: 42px;
     padding: 0;
-}
-
-.btnH:hover {
     border: none;
+    z-index: 1;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
 }
-
-.btnH::before,
-.btnH::after{
+.btnH:hover {
+    background: transparent;
+    color: #262626;
+}
+.btnH:before,
+.btnH:after {
     position: absolute;
     content: "";
-    width: 0%;
-    height: 0%;
-    border: 2px solid;
-    z-index: -1;
-    transition: all 0.3s ease;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-}
-
-.btnH::before{
-    top: 0;
     left: 0;
-    border-bottom-color: transparent;
-    border-right-color:transparent ;
-    border-top-color:#000 ;
-    border-left-color:#000 ;
-}
-
-.btnH::after{
-    bottom: 0;
-    right: 0;
-    border-bottom-color: transparent;
-    border-right-color:transparent ;
-    border-top-color:#000 ;
-    border-left-color:#000 ;
-}
-
-.btnH:hover::before,
-.btnH:hover::after {
-    border-color:#000 ;
-    height: 100%;
     width: 100%;
+    height: 50%;
+    right: 0;
+    z-index: -1;
+    background: #262626;
+    transition: all 0.3s ease;
+}
+.btnH:before {
+    top: 0;
+}
+.btnH:after {
+    bottom: 0;
+}
+.btnH:hover:before,
+.btnH:hover:after {
+    height: 0;
+    background-color: #262626;
 }
 
 figure{
@@ -152,7 +138,7 @@ figcaption {
     bottom: 0;
     right: 0;
     text-align: right;
-    color: #fff;
+    color: #f1f1f1;
     opacity: 0.7;
     width: 100%;
 }
