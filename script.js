@@ -3,13 +3,28 @@ preview = document.querySelector(".preview-box"),
 iconClose = document.querySelector(".icon"),
 next = document.querySelector(".next"),
 prev = document.querySelector(".prev"),
-imgActive = document.querySelector(".image");
+imgActive = document.querySelector(".image"),
+theme = document.querySelector(".theme");
+console.log(gallery)
 let sourceImg,
 figure = document.querySelectorAll(".wrapper"),
 btnSeeMore = document.querySelector(".btnSeeMore"),
 current = 0;
 
 window.onload = () => {
+    theme.addEventListener("click", () => {
+        for(let i = 0; gallery.length; i++){
+            if(gallery[i].classList.contains("ThemeImage")){
+                gallery[i].classList.remove("ThemeImage");
+                gallery[i].classList.add("columnImage");
+            }else{
+                gallery[i].classList.add("ThemeImage");
+                gallery[i].classList.remove("columnImage");
+                
+            }
+        }
+    });
+    
     btnSeeMore.addEventListener("click", () => {
         for(let i = current; i < current + 4; i++){
             if(figure[i]){
